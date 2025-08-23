@@ -1,14 +1,9 @@
 pipeline{
-    agent{
-        label 'node-1'
-    }
+    agent any
      stages{
-         stage("server ip"){
-             steps{
-                 sh '''
-                     hostname -i
-                     echo "hostname is:$(hostname -i)"
-                     '''
+         stage("Build Stage"){
+             steps{     
+                 echo "Build is Successful"
              }
          }
      }
